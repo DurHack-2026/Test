@@ -29,32 +29,26 @@ body {
   padding: 22px;
 }
 
-
 .frame {
   width: 100%;
-  min-height: calc(100vh - 44px);
-  padding: 32px;
-  background-color: #765640;
-  border: 5px solid #b89a77;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M12 0h6v6h-6zM30 0h6v6h-6zM6 6h6v6H6zM18 6h6v6h-6zM24 6h6v6h-6zM36 6h6v6h-6zM12 12h6v6h-6zM30 12h6v6h-6zM18 18h6v6h-6zM24 18h6v6h-6zM12 24h6v6h-6zM30 24h6v6h-6zM6 30h6v6H6zM18 30h6v6h-6zM24 30h6v6h-6zM36 30h6v6h-6zM12 36h6v6h-6zM30 36h6v6h-6z' fill='%23d5b88d'/%3E%3C/svg%3E");
-  background-size: 48px 48px;
-  image-rendering: pixelated;
-}
-
-.inner-frame {
-  height: 100%;
-  min-height: calc(100vh - 108px);
-  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 35px;
   background: #493629;
 }
 
+.inner-frame {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+  padding: 20px;
+  background: #765640;
+}
 
 
 .content {
   width: 100%;
-  max-width: 10000px;
-  min-height: 75vh;
-
+  min-height: calc(100vh - 110px);
   box-sizing: border-box;
 
   background: #eee3d0;
@@ -68,23 +62,25 @@ body {
   gap: 48px;
   text-align: center;
   padding: 30px;
-
-  margin: 0 auto;
+  margin: 0;
 }
+
 
 @media (max-width: 600px) {
-  .content {
-    width: 94%;
-    min-height: 75vh;
-    padding: 20px;
-    gap: 32px;
+  .frame {
+    padding: 15px;
   }
 
-  .content h1 {
-    font-size: clamp(26px, 7vw, 40px);
+  .inner-frame {
+    padding: 10px;
+  }
+
+  .content {
+    min-height: calc(100vh - 50px);
+    padding: 15px;
+    gap: 30px;
   }
 }
-
 
 .content h1 {
   color: #765640;
