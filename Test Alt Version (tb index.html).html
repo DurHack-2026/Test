@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fair Isle</title>
+
+<style>
+
+:root {
+  --dark: #493629;
+  --brown: #765640;
+  --tan: #b89a77;
+  --cream: #eee3d0;
+  --stitch: #d5b88d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--dark);
+  display: flex;
+  padding: 22px;
+}
+
+/* Outer dark brown frame */
+.frame {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - 44px);
+  min-height: calc(100svh - 44px);
+  display: flex;
+  padding: 35px;
+  background: var(--dark);
+}
+
+/* Inner decorative frame */
+.inner-frame {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  padding: 20px;
+  background: var(--brown);
+}
+
+/* Beige centre automatically fills available space */
+.content {
+  flex: 1;
+  min-width: 0;
+  min-height: 420px;
+  background: var(--cream);
+  border: 3px solid var(--tan);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 48px;
+  text-align: center;
+  padding: 30px;
+}
+
+.content h1 {
+  color: var(--brown);
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.content h1 a {
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content h1 a:hover {
+  text-decoration: underline;
+}
+
+/* Chair and sparkles */
+.chair-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  aspect-ratio: 200 / 230;
+  margin-top: 10px;
+}
+
+.chair-wrapper svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chair-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chair-link svg {
+  display: block;
+}
+
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  color: #b88958;
+  font-family: monospace;
+  line-height: 1;
+  animation: pixel-twinkle 1.8s steps(3, end) infinite;
+}
+
+.sparkle.main {
+  font-size: 27px;
+}
+
+.sparkle.small {
+  font-size: 15px;
+  color: var(--stitch);
+  animation-duration: 2.4s;
+}
+
+.sparkle.top-left {
+  top: -10px;
+  left: 30px;
+}
+
+.sparkle.tiny-one {
+  top: 10px;
+  left: 25px;
+  animation-delay: 0.5s;
+}
+
+.sparkle.bottom-right {
+  bottom: 8px;
+  right: 18px;
+}
+
+.sparkle.tiny-two {
+  bottom: 25px;
+  right: 13px;
+  animation-delay: 0.8s;
+}
+
+@keyframes pixel-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .frame {
+    min-height: calc(100vh - 20px);
+    min-height: calc(100svh - 20px);
+    padding: 12px;
+  }
+
+  .inner-frame {
+    padding: 8px;
+  }
+
+  .content {
+    min-height: 420px;
+    padding: 15px;
+    gap: 30px;
+  }
+
+  .content h1 {
+    font-size: clamp(26px, 7vw, 40px);
+  }
+
+  .chair-wrapper {
+    width: min(200px, 65vw);
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+  <main class="frame">
+    <div class="inner-frame">
+      
+	<section class="content">
+
+  		<h1>
+  			<a href="https://durhack-2026.github.io/LogicalSexualSalamander/">
+    		Room For Improvement
+  			</a>
+		</h1>
+
+		<div class="chair-wrapper">
+
+  			<!-- Top-left pair -->
+  			<span class="sparkle main top-left">✦</span>
+  			<span class="sparkle small tiny-one">✧</span>
+
+  			<!-- Bottom-right pair -->
+  			<span class="sparkle main bottom-right">✦</span>
+  			<span class="sparkle small tiny-two">✧</span>
+
+  			<a href="https://www.youtube.com/watch?v=Ew7Zkkucos8"
+   				class="chair-link"
+   				aria-label="">
+
+
+			<svg width="200" height="240" viewBox="0 0 200 230"
+       				xmlns="http://www.w3.org/2000/svg"
+				shape-rendering="crispEdges">
+
+   			<!-- Chair back -->
+   		 	<rect x="48" y="8" width="104" height="96"
+          			fill="#493629"/>
+
+    			<rect x="56" y="16" width="88" height="80"
+          			fill="#765640"/>
+			<rect x="64" y="24" width="72" height="64"
+				fill="#b88958"/>
+
+			<!-- Backrest wooden slats -->
+  			<rect x="72" y="32" width="12" height="48" fill="#765640"/>
+  			<rect x="94" y="32" width="12" height="48" fill="#765640"/>
+  			<rect x="116" y="32" width="12" height="48" fill="#765640"/>
+
+  			<!-- Top detail -->
+  			<rect x="80" y="24" width="40" height="8" fill="#d5b88d"/>
+
+  			<!-- Seat -->
+  			<rect x="32" y="104" width="136" height="32" fill="#493629"/>
+  			<rect x="40" y="104" width="120" height="24" fill="#b88958"/>
+  			<rect x="48" y="112" width="104" height="8" fill="#d5b88d"/>
+
+  			<!-- Legs -->
+  			<rect x="48" y="136" width="16" height="72" fill="#765640"/>
+  			<rect x="136" y="136" width="16" height="72" fill="#765640"/>
+	
+  			<!-- Leg highlights -->
+ 			<rect x="48" y="144" width="6" height="56" fill="#b88958"/>
+  			<rect x="136" y="144" width="6" height="56" fill="#b88958"/>
+
+  			<!-- Cross support -->
+ 			<rect x="56" y="168" width="88" height="12" fill="#493629"/>
+  			<rect x="64" y="168" width="72" height="4" fill="#b88958"/>
+
+  			<!-- Feet -->
+  			<rect x="40" y="208" width="32" height="8" fill="#493629"/>
+  			<rect x="128" y="208" width="32" height="8" fill="#493629"/>
+    		
+
+		
+	</svg>
+	</a>
+	</div>  
+      </section>
+    </div>
+  </main>
+</body>
+</html>
